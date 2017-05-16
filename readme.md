@@ -11,9 +11,6 @@ CodeX  <<-->> Steltix Labs Workshop
 * The Column ALPH (Alpha Name) holds the human readable name for the company. 
 
 
-===================
-
-
 ## Items Persona 
 
 - Steve is a Warehouse Manager for a company that makes and ships sporting goods. His company carries a wide range of products and he needs to always be aware of how many items they offer in each class or product. He would like to have a nice easy way to see the number of products that his company carries in each class. Steve is very technical and like to see lots of the Category codes for each item even though these values seem strange. He has supplied the following request - 
@@ -23,8 +20,6 @@ CodeX  <<-->> Steltix Labs Workshop
 * He would love to see the following Columns somehow in his dashboard
 *  UOM1 , ITM, AITM, BPFG, STKT, ALN
 
-
-
-Notes
+#### Notes
 
 * main javascript file is /js/main.js
