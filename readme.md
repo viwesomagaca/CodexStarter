@@ -5,7 +5,7 @@ CodeX  <<-->> Steltix Labs Workshop
 1. Customers Persona - Joan is a Customer Relationship Manager for a large distribution company that buys and resells thousands of stock items to a wide range of international customers. It is essential for her to be able to have visibility over the types of business relationships that she is managing for her Enterprise company.  She would like to see the address book data visualized in a way that makes it easy for her to see these catagories of relationship. She is not very technical but would like a dashboard to see the customer data as easy as possible. She has given the following pointers 
 * the relevant data exists in the JDE Address Book Master (F0101) table 
 * The Column AT1 (search type) tells her what catagory of relationship her company has with each address book entry
-** C = customer
+* C = customer
 * O = opportunity
 * P = prospect
 * V = supplier
