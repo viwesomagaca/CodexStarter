@@ -1,4 +1,4 @@
-CodeX  <<--** Steltix Labs Workshop
+CodeX  <<-->> Steltix Labs Workshop
 ===================
 
 
