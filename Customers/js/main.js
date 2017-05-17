@@ -22,11 +22,9 @@ $(document).ready(function () { // wait for document to be ready
 
             var token = data.userInfo.token;
 
-            // build a new request obj to fetch data
+            // build a request obj to fetch data
             var reqData = {  
-                    "username":"demo",
-                    "password":"demo",
-                    "deviceName" : "MyDevice",
+                    "deviceName" : "aisTester",
                     "targetName" : "F0101",
                     "targetType" : "table",
                     "outputType":"GRID_DATA",
@@ -39,7 +37,7 @@ $(document).ready(function () { // wait for document to be ready
                     }
 
 
-            //reqData.token = token;  // <<- add our token from 1st request
+            reqData.token = token;  // <<- add our token from 1st request
 
             $.ajax({
                 url: "http://demo.steltix.com/jderest/dataservice", // <<- can also try http://demo.steltix.com/jderest/formservice with example request object below"

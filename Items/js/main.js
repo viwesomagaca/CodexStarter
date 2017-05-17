@@ -22,11 +22,9 @@ $(document).ready(function () { // wait for document to be ready
 
             var token = data.userInfo.token;
 
-            // build a new request obj to fetch data
+            // build a request obj to fetch data
             var reqData = {  
-                    "username":"demo",
-                    "password":"demo",
-                    "deviceName" : "MyDevice",
+                    "deviceName" : "aisTester",
                     "targetName" : "F4101",
                     "targetType" : "table",
                     "outputType":"GRID_DATA",
@@ -35,10 +33,9 @@ $(document).ready(function () { // wait for document to be ready
                     "query" : {
                         "autoFind" : true,
                         "condition" : []
-                    }
+                        }
                     }
 
-            }
 
             reqData.token = token;  // <<- add our token from 1st request
 
@@ -48,7 +45,7 @@ $(document).ready(function () { // wait for document to be ready
                 contentType: "application/json",
                 data: JSON.stringify(reqData)
             }).done(function (data) {
-                
+
                 console.log(JSON.stringify(data)) // <<- log data to console
                 const resultsElem = document.querySelector('.results');  // <<- handle for results
                 resultsElem.textContent = JSON.stringify(data);  // <<-  add data to DOM
