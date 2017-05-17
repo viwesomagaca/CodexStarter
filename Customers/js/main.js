@@ -23,23 +23,23 @@ $(document).ready(function () { // wait for document to be ready
             var token = data.userInfo.token;
 
             // build a new request obj to fetch data
-            var reqData = {
-                "deviceName": "aisTester", // <<- use the same as before
-                "aliasNaming": true,
-                "outputType": "GRID_DATA", // <<- Allowed Values: [ "<blank>", "VERSION1", "GRID_DATA", "VERSION2" ]
-                "targetName": "F0101",  // <<- the table you want data from 
-                "targetType": "table",
-                "dataServiceType": "BROWSE",
-                "maxPageSize": "50",  // <<- number of rows you expect max
-                "returnControlIDs": "F0101.ALPHA", //  <<-  cols to return
-                "query": {
-                    "autoFind": true,   // <<- no conditions
-                    "condition": []
-                }
+            var reqData = {  
+                    "username":"demo",
+                    "password":"demo",
+                    "deviceName" : "MyDevice",
+                    "targetName" : "F0101",
+                    "targetType" : "table",
+                    "outputType":"GRID_DATA",
+                    "dataServiceType" : "BROWSE",  
+                    "maxPageSize" : "100",
+                    "query" : {
+                        "autoFind" : true,
+                        "condition" : []
+                        }
+                    }
 
-            }
 
-            reqData.token = token;  // <<- add our token from 1st request
+            //reqData.token = token;  // <<- add our token from 1st request
 
             $.ajax({
                 url: "http://demo.steltix.com/jderest/dataservice", // <<- can also try http://demo.steltix.com/jderest/formservice with example request object below"

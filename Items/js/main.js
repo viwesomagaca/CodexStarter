@@ -23,19 +23,20 @@ $(document).ready(function () { // wait for document to be ready
             var token = data.userInfo.token;
 
             // build a new request obj to fetch data
-            var reqData = {
-                "deviceName": "aisTester", // <<- use the same as before
-                "aliasNaming": true,
-                "outputType": "GRID_DATA", // <<- Allowed Values: [ "<blank>", "VERSION1", "GRID_DATA", "VERSION2" ]
-                "targetName": "F0101",  // <<- the table you want data from 
-                "targetType": "table",
-                "dataServiceType": "BROWSE",
-                "maxPageSize": "50",  // <<- number of rows you expect max
-                "returnControlIDs": "F4101.LITM, F4101.DESC1, F4101_PRP2", //  <<-  cols to return
-                "query": {
-                    "autoFind": true,   // <<- no conditions
-                    "condition": []
-                }
+            var reqData = {  
+                    "username":"demo",
+                    "password":"demo",
+                    "deviceName" : "MyDevice",
+                    "targetName" : "F4101",
+                    "targetType" : "table",
+                    "outputType":"GRID_DATA",
+                    "dataServiceType" : "BROWSE",  
+                    "maxPageSize" : "100",
+                    "query" : {
+                        "autoFind" : true,
+                        "condition" : []
+                    }
+                    }
 
             }
 
