@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-
+        <script src="handlebars-v4.0.5.js"></script>
 
     </head>
     <body>
@@ -22,8 +22,47 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div class="results">
-        </div>
+		<script class="dpDowns" type="text/x-handlebars-template">
+        
+          <select>
+			  <option value="" disabled selected >Select Option</option>
+			 {{#each F0101_AT1}}
+			<option> {{this}}</option>
+	          {{/each}}
+			</select>
+		
+		</script>
+	
+		
+		
+		<div id="OutP">
+		<select class="customerOptions"></select>
+		</div>
+			<input class="btnFilter" type="button" value="filter" >
+		<script class="tableDisplay" type="text/x-handlebars-template">
+		  <table id="tableC" width="100%">
+			<tr>
+		       <th> Customer Name</th>
+		       <th> Search Type (ATI)</th>
+			</tr>
+			  
+			  {{#each myData}}
+			  <tr>
+			     <td>{{F0101_ALPH}}</td>
+				  <td>{{F0101_AT1}}</td>
+			</tr>
+			{{/each}}
+			</table>
+		
+		
+		
+		
+		</script>
+
+		
+		<div id="display"></div>
+        <pre class="results">
+        </pre>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
